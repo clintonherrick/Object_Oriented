@@ -7,11 +7,13 @@ describe(Word) do
     Word.clear()
   end
 
+
   describe(".all") do
     it("is empty at first") do
       expect(Word.all()).to(eq([]))
     end
   end
+
 
   describe('#new_word') do
     it("returns the word that has been entered") do
@@ -22,10 +24,10 @@ describe(Word) do
 
 
   describe('#save') do
-    ("returns a word from the array of saved words") do
+    it ("returns a word from the array of saved words") do
       test_word = Word.new("Sarlacc")
       test_word.save()
-      expect(Word.all())to(eq([]))
+      expect(Word.all()).to(eq([]))
     end
   end
 
@@ -36,11 +38,4 @@ describe(Word) do
       expect(Word.all()).to(eq([]))
     end
   end
-
-
-
-
-
-
-
 end
