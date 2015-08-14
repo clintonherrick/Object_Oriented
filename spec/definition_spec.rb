@@ -1,5 +1,6 @@
 require('rspec')
 require('definition')
+require('word')
 
 describe(Definition) do
   before() do
@@ -33,13 +34,6 @@ describe(Definition) do
     it("returns the saved definition that has been entered") do
       test_task = Definition.new("a semi-sentient, plant-like, omnivorous creature found on several planets across the galaxy. Not much was known about this creature.")
       expect(test_task.definition()).to(eq("a semi-sentient, plant-like, omnivorous creature found on several planets across the galaxy. Not much was known about this creature."))
-    end
-  end
-
-  describe('#id') do
-    it("returns the id of the new word") do
-      test_task = Definition.new("a semi-sentient, plant-like, omnivorous creature found on several planets across the galaxy. Not much was known about this creature.")
-      expect(test_task.id()).to(eq(1))
     end
   end
 
