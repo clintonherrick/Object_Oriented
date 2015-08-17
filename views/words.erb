@@ -1,11 +1,6 @@
-<h3>Here are the definitions for your word:</h3>
-
+<h1>Words currently in your dictionary</h1>
 <ul>
-  <% @word.dictionary().each() do |dictionary| %>
-  <li><a href='/definitions/<%= dictionary.id() %>'><%= dictionary.definition() %></a></li>
+  <% @words.each() do |word| %>
+    <li><a href='/words/<%= word.id() %>'><%= word.word() %></a></li>
   <% end %>
 </ul>
-
-<a href='/words/<%= @word.id %>/definitions/new'><input type="text" name="fname" placeholder="Enter Definition Here"><br></a>
-<p></p>
-<a href='/'>Back to the start</a>
